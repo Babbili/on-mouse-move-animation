@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import styles from './App.module.scss';
 
 function App() {
+
+  const [x, setX] = useState(0)
+  const [y, setY] = useState(0)
+
+  function mouseMove(e) {
+    setX(e.pageX - e.target.offsetLeft)
+    setY(e.pageY - e.target.offsetTop)
+
+    document.documentElement.style.setProperty('--x', `${x}px`)
+    document.documentElement.style.setProperty('--y', `${y}px`)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.card} onMouseMove={(e) => mouseMove(e)} >
+      <h2>On Mouse Move Animation</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid nobis tenetur at voluptatibus, eligendi veniam quo assumenda, ullam, sunt alias beatae. Cumque eum commodi explicabo sed hic molestias ipsa voluptas! 🐈</p>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
