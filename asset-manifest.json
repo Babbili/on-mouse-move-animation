@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/on-mouse-move-animation/static/css/main.108dfc40.css",
+    "main.js": "/on-mouse-move-animation/static/js/main.3331c929.js",
+    "index.html": "/on-mouse-move-animation/index.html",
+    "main.108dfc40.css.map": "/on-mouse-move-animation/static/css/main.108dfc40.css.map",
+    "main.3331c929.js.map": "/on-mouse-move-animation/static/js/main.3331c929.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.108dfc40.css",
+    "static/js/main.3331c929.js"
+  ]
+}
